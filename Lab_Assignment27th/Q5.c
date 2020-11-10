@@ -27,4 +27,4 @@ void main()
         printf ("name = %s %s,Telephone=%s\n", input.fname, input.lname,input.tnumber); 
   
     fclose (file); 
-}
+}		
