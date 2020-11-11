@@ -22,13 +22,13 @@ int main(int argc,char * argv[])
    exit(0);	
    }
   else
-   if(min<1000 && min>9999) 
+   if(min<1000 || min>9999) 
   {
    printf("Invalid min");
    exit(0);	 
    }
    else
-  if(max<1000 && max>9999)
+  if(max<1000 || max>9999)
   {
     printf("Invalid max");
     exit(0);	 
