@@ -14,13 +14,14 @@ int main(int argc,char *argv[])
 	}
 	ustr[i]='\0';
 	strcpy(str,ustr);
-	printf("%s",ustr);
+	printf("%s\n",ustr);
     if(strstr(str,"FFF")==NULL)
     	exit(0);
+    int option;
     if(str[strlen(str)-1]!=48 && str[strlen(str)-1]!=49)
-    	exit(0);
-    int option=(int)str[strlen(str)-1]-48;
-    printf("\n%d",option);
+    	option=3;
+    else
+        option=(int)str[strlen(str)-1]-48;
     switch(option)
     {
     	case 0:
@@ -36,5 +37,9 @@ int main(int argc,char *argv[])
     			else
     				printf("SOIS is not a substring of given string");
     		    break;
+    	default:
+    	        printf(" ");
+    	        int lenstr=strlen(str)-3;
+    			printf("Length of the word excluding FFF=%d",lenstr);
     }
 }
